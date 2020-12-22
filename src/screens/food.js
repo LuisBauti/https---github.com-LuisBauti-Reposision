@@ -79,7 +79,6 @@ export default class App extends Component {
             />
             <View style={{height:20}} />
           </View>
-                
         </View>
       </ScrollView>
     );
@@ -113,6 +112,22 @@ export default class App extends Component {
             </Text>
             <Text>Descp Food and Details</Text>
             <Text style={{fontSize:20,color:"green"}}>${item.price}</Text>
+
+            <TouchableOpacity
+              onPress={()=>this.onClickAddCart(item)}
+              style={{
+                width:(width/2)-40,
+                backgroundColor:'#33c37d',
+                flexDirection:'row',
+                alignItems:'center',
+                justifyContent:"center",
+                borderRadius:5,
+                padding:5
+              }}>
+            <Text style={{fontSize:18, color:"white", fontWeight:"bold"}}>Add Cart</Text>
+            <View style={{width:10}} />
+            <Icon name="ios-add-circle" size={30} color={"white"} />
+            </TouchableOpacity>
           </TouchableOpacity>
         )
     }
